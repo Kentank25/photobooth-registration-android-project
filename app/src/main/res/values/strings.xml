@@ -1,11 +1,18 @@
 <resources>
-
-    <string name="register">Register</string>
     <string name="email">Email</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="create_account">Create Account</string>
-    <string name="already_have_an_account_sign_in_here">Already have an account? Sign In here</string>
-    <string name="app_name" />
+    <string name="member_registration">Photobooth Membership Registration</string>
+    <string name="full_name">Full Name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="choose_your_perks">Choose Your Perks</string>
+    <string name="unlimited_digital_copies">Unlimited Digital Copies</string>
+    <string name="monthly_physical_prints">Monthly Physical Prints</string>
+    <string name="vip_flipbook_access">VIP FlipBook Access</string>
+    <string name="membership_tier">Membership Tier</string>
+    <string name="join_membership">Join Membership</string>
+    <string name="already_a_member_sign_in">Already a Member? Sign In</string>
 </resources>

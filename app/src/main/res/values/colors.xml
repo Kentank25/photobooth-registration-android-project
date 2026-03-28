@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
     <color name="blue">#263D64</color>
     <color name="pink">#FEDDE9</color>
+
+    <!-- Warm Theme Colors -->
+    <color name="warm_primary">#D35400</color>
+    <color name="warm_primary_variant">#E67E22</color>
+    <color name="warm_secondary">#F39C12</color>
+    <color name="warm_background_start">#FFF3E0</color>
+    <color name="warm_background_end">#FFE0B2</color>
+    <color name="warm_text_dark">#4E342E</color>
 </resources>

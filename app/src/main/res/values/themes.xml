@@ -2,7 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Register" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/warm_primary</item>
+        <item name="colorSecondary">@color/warm_secondary</item>
+        <item name="android:windowBackground">@color/warm_background_start</item>
     </style>
 
     <style name="Theme.Register" parent="Base.Theme.Register" />
