@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
         EditText etEmail = findViewById(R.id.etEmail);
         EditText etUsername = findViewById(R.id.etUsername);
+
+        // --- TAMBAHKAN INI ---
+        EditText etPassword = findViewById(R.id.etPassword); // Pastikan ID sesuai di XML
+        EditText etConfirmPassword = findViewById(R.id.etConfirmPassword); // Pastikan ID sesuai di XML
+        // ----------------------
+
         Spinner spinnerCity = findViewById(R.id.spinnerTier);
         Button btnCreateAccount = findViewById(R.id.btnRegisterMember);
 
@@ -31,17 +37,29 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, tiers);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         spinnerCity.setAdapter(adapter);
 
         btnCreateAccount.setOnClickListener(v -> {
             String email = etEmail.getText().toString();
             String username = etUsername.getText().toString();
 
-            if (email.isEmpty() || username.isEmpty()) {
-                Toast.makeText(MainActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
-            } else {
-                // Simulasi berhasil register
+            // --- AMBIL VALUE PASSWORD ---
+            String password = etPassword.getText().toString();
+            String confirmPassword = etConfirmPassword.getText().toString();
+            // ----------------------------
+
+            // LOGIKA VALIDASI
+            if (email.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                Toast.makeText(MainActivity.this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show();
+            }
+            // CEK APAKAH PASSWORD COCOK
+            else if (!password.equals(confirmPassword)) {
+                // Beri peringatan langsung di field confirm password
+                etConfirmPassword.setError("Password tidak cocok!");
+                etConfirmPassword.requestFocus();
+            }
+            else {
+                // Jika semua validasi lolos
                 Toast.makeText(MainActivity.this, "Registration Successful for " + username, Toast.LENGTH_LONG).show();
             }
         });
